@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Scene, Entity } from "@belivvr/aframe-react";
-
+import { Grass } from "./components/floor";
+import Camera from "./components/Camera";
 function App() {
     const [rendered, setRendered] = useState<boolean>(false);
 
@@ -18,22 +19,8 @@ function App() {
 
     return (
         <Scene>
-            <Entity
-                geometry={{
-                    primitive: "plane",
-                    width: 100,
-                    height: 100,
-                }}
-                rotation={{
-                    x: -90,
-                    y: 0,
-                    z: 0,
-                }}
-                material={{
-                    src: "texture/grass.jpg",
-                    repeat: { x: 100, y: 100 },
-                }}
-            />
+            <Grass />
+            <Camera fly={false} />
         </Scene>
     );
 }
