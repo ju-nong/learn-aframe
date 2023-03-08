@@ -12,7 +12,6 @@
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "aframe": "^1.4.1",
-    "eslint": "^8.0.0",
     "nipplejs": "^0.10.1",
     "node-sass": "^8.0.0",
     "react": "^18.2.0",
