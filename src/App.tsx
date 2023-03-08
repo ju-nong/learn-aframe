@@ -10,6 +10,7 @@ function App() {
 
         if (typeof window !== "undefined") {
             require("aframe"); // eslint-disable-line global-require
+            require("./aframe/joystick"); // eslint-disable-line global-require
         }
     }, [setRendered]);
 
@@ -18,7 +19,7 @@ function App() {
     }
 
     return (
-        <Scene>
+        <Scene cursor="rayOrigin: mouse;">
             <Grass />
             <Camera fly={false} />
         </Scene>
